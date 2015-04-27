@@ -80,7 +80,7 @@ public class ClientXml {
     private void BuildView() {
 
         frame = new JFrame("Bibliotheque des  CV");
-        frame.setBackground(Color.BLACK);
+        frame.setBackground(Color.GRAY);
         frame.setPreferredSize(new Dimension(FRAME_WIDTH, FRAME_HEIGHT));
         frame.setMinimumSize(new Dimension(FRAME_WIDTH, FRAME_HEIGHT));
         text = new JTextPane();
@@ -89,27 +89,27 @@ public class ClientXml {
         scroll = new JScrollPane();
         scroll.setHorizontalScrollBarPolicy(HORIZONTAL_SCROLLBAR_NEVER);
 
-       java.net.URL url1 = getClass().getResource("bouton_voir_cv.png");
-      ImageIcon i1 = new ImageIcon(url1);
+     java.net.URL url1 = getClass().getResource("bouton_voir_cv.png");
+     ImageIcon i1 = new ImageIcon(url1);
         View = new JButton(i1);
-      View.setBackground(Color.BLACK);
-        View.setForeground(Color.BLACK);
+      View.setBackground(Color.GRAY);
+        View.setForeground(Color.GRAY);
         View.setBorder(null);
         java.net.URL url2 = getClass().getResource("bouton_ajoute_cv.png");
         ImageIcon i2 = new ImageIcon(url2);
         Addcv = new JButton(i2);
-       Addcv.setBackground(Color.BLACK);
-       Addcv.setForeground(Color.BLACK);
+       Addcv.setBackground(Color.GRAY);
+       Addcv.setForeground(Color.GRAY);
         Addcv.setBorder(null);
 
-        java.net.URL ok = getClass().getResource("ok.png");
+        java.net.URL ok = getClass().getResource("recherce.png");
         ImageIcon iconOK = new ImageIcon(ok);
         Valide = new JButton(iconOK);
-       Valide.setBackground(Color.BLACK);
-        Valide.setForeground(Color.BLACK);
+       Valide.setBackground(Color.GRAY);
+        Valide.setForeground(Color.GRAY);
         Valide.setBorder(null);
 
-        text.setBackground(Color.BLACK);
+        text.setBackground(Color.GRAY);
         text.setForeground(Color.WHITE);
 
         Idres = new JTextField(2);
@@ -122,24 +122,24 @@ public class ClientXml {
         ImageIcon iconPlus = new ImageIcon(plus);
 
 
-        Ajoutlang = new JButton();
+        Ajoutlang = new JButton(iconPlus);
         
-        Ajoutexp = new JButton();
+        Ajoutexp = new JButton(iconPlus);
 
 
-        Ajoutlang.setForeground(Color.BLACK);
-        Ajoutlang.setBackground(Color.BLACK);
+        Ajoutlang.setForeground(Color.GRAY);
+        Ajoutlang.setBackground(Color.GRAY);
         Ajoutlang.setBorder(null);
 
-        Ajoutexp.setForeground(Color.BLACK);
-        Ajoutexp.setBackground(Color.BLACK);
+        Ajoutexp.setForeground(Color.GRAY);
+        Ajoutexp.setBackground(Color.GRAY);
         Ajoutexp.setBorder(null);
 
 
 
         languages = new ArrayList<JTextField>();
-        languages.add(new JTextField("a"));
-        languages.add(new JTextField("a"));
+        languages.add(new JTextField(""));
+        languages.add(new JTextField(""));
 
         
 
@@ -150,36 +150,33 @@ public class ClientXml {
 
 
 
-        java.net.URL ajouter = getClass().getResource("ajouter.png");
+        java.net.URL ajouter = getClass().getResource("ajout1.png");
         ImageIcon iconAjouter = new ImageIcon(ajouter);
 
-        aj = new JButton();
-       aj.setForeground(Color.BLACK);
-        aj.setBackground(Color.BLACK);
+        aj = new JButton(iconAjouter);
+       aj.setForeground(Color.GRAY);
+        aj.setBackground(Color.GRAY);
         aj.setBorder(null);
 
-     java.net.URL acc = getClass().getResource("accueil.png");
-        ImageIcon iconHome = new ImageIcon(acc);
+     java.net.URL a = getClass().getResource("accueil1.png");
+        ImageIcon iconHome = new ImageIcon(a);
 
-        Home = new JButton();
-        Home.setForeground(Color.BLACK);
-        Home.setBackground(Color.BLACK);
+        Home = new JButton(iconHome);
+        Home.setForeground(Color.GRAY);
+        Home.setBackground(Color.GRAY);
         Home.setBorder(null);
     }
 
     private void placeComponents() {
 
         JPanel panel1 = new JPanel(new GridLayout(0, 1)); {
-            java.net.URL imgUrl = getClass().getResource("btn-cv.png");
-            ImageIcon icon = new ImageIcon(imgUrl);
-            JLabel lab = new JLabel(icon);
-            panel1.add(lab, BorderLayout.CENTER);
-            panel1.setBackground(Color.GRAY);
+           
+           panel1.setBackground(Color.GRAY);
             JPanel p2 = new JPanel();
 
             p2.add(View, BorderLayout.CENTER);
 
-            p2.setBackground(Color.GRAY);
+           p2.setBackground(Color.GRAY);
             panel1.add(p2);
             JPanel p3 = new JPanel();
             p3.setBackground(Color.GRAY);
@@ -191,15 +188,11 @@ public class ClientXml {
         frame.add(scroll, BorderLayout.CENTER);
         scroll.getViewport().add(panel1);
     }
-    private void allResumesView() {
+    private void AllView() {
 
         JPanel panel = new JPanel(new BorderLayout()); {
             JPanel panel2 = new JPanel(new BorderLayout()); {
-                java.net.URL imgUrl = getClass().getResource("btn-cv.png");
-                ImageIcon icon = new ImageIcon(imgUrl);
-                JLabel lab = new JLabel(icon, JLabel.CENTER);
-                lab.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
-                panel2.add(lab, BorderLayout.NORTH);
+              
                 panel2.setBackground(Color.GRAY);
 
                 JPanel panel3 = new JPanel(new BorderLayout()); {
@@ -231,15 +224,11 @@ public class ClientXml {
         scroll.getViewport().add(panel);
     }
 
-    private void addResumeView() {
+    private void AddView() {
 
         JPanel panel = new JPanel(new BorderLayout()); {
             JPanel panel2 = new JPanel(new BorderLayout()); {
-                java.net.URL imgUrl = getClass().getResource("imCV.png");
-                ImageIcon icon = new ImageIcon(imgUrl);
-                JLabel lab = new JLabel(icon, JLabel.CENTER);
-                lab.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
-                panel2.add(lab, BorderLayout.NORTH);
+              
                 panel2.setBackground(Color.GRAY);
 
                 JPanel panel3 = new JPanel(new GridLayout(0, 2));  {
@@ -371,9 +360,9 @@ public class ClientXml {
         View.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                allResumesView();
+                AllView();
                 try {
-                    getAllResumes();
+                    GetResum();
                 } catch (Exception e1) {
 
                 }
@@ -383,7 +372,7 @@ public class ClientXml {
         Addcv.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-               addResumeView();
+               AddView();
                 try {
                     
                 } catch (Exception e1) {
@@ -395,11 +384,11 @@ public class ClientXml {
         Valide.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                allResumesView();
+                AllView();
                 int id = 1;
                 if (Idres.getText().equals("")) {
                     try {
-                        getAllResumes();
+                        GetResum();
                     } catch (Exception e1) {
 
                     }
@@ -417,7 +406,7 @@ public class ClientXml {
                     return;
                 }
                 try {
-                    getResume(id);
+                    GetResumeId(id);
                 } catch (Exception e1) {
                     return;
                 }
@@ -431,7 +420,7 @@ public class ClientXml {
             public void actionPerformed(ActionEvent e) {
                 languages.add(new JTextField());
                 languages.add(new JTextField());
-                addResumeView();
+                AddView();
             }
         });
 
@@ -441,7 +430,7 @@ public class ClientXml {
                 experiences.add(new JTextField());
                 experiences.add(new JTextField());
                 experiences.add(new JTextField());
-                addResumeView();
+                AddView();
             }
         });
 
@@ -450,7 +439,7 @@ public class ClientXml {
             public void actionPerformed(ActionEvent e) {
                 boolean b = false;
                 try {
-                    b = addCV();
+                    b = Ajoutcv();
                 } catch (JAXBException jaxbe) {
                     //
                 }
@@ -472,7 +461,7 @@ public class ClientXml {
             }
         });
     }
-    private void getAllResumes() {
+    private void GetResum() {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         factory.setValidating(false);
         factory.setNamespaceAware(true);
@@ -487,13 +476,13 @@ public class ClientXml {
             Document document = builder.parse(url);
             document.getDocumentElement().normalize();
             text.setText("");
-            afficherListeCV(document);
+            ShowListCv(document);
         } catch (Exception e) {
         }
         text.setCaretPosition(0);
     }
 
-    private void getResume(int id) {
+    private void GetResumeId(int id) {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         factory.setValidating(false);
         factory.setNamespaceAware(true);
@@ -515,13 +504,13 @@ public class ClientXml {
             }
             document.getDocumentElement().normalize();
             text.setText("");
-            afficherListeCV(document);
+            ShowListCv(document);
         } catch (Exception e) {
         }
         text.setCaretPosition(0);
     }
 
-    private void afficherListeCV(Document document) throws BadLocationException {
+    private void ShowListCv(Document document) throws BadLocationException {
 
         NodeList l = document.getElementsByTagName("resume");
 
@@ -590,7 +579,7 @@ public class ClientXml {
 
         }
     }
-    private boolean addCV() throws JAXBException {
+    private boolean Ajoutcv() throws JAXBException {
         service = Service.create(qname);
         service.addPort(qname, HTTPBinding.HTTP_BINDING, url);
         Dispatch<Source> dispatcher = service.createDispatch(qname,
@@ -680,7 +669,7 @@ public class ClientXml {
         }
     }
 
-    public void display() {
+    public void Show() {
         frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
@@ -689,7 +678,7 @@ public class ClientXml {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
-                new ClientXml().display();
+                new ClientXml().Show();
             }
         });
     }
