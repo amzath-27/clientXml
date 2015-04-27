@@ -19,8 +19,8 @@ public class Resume {
         this.nom="";
         this.prenom="";
         this.Adresse="";
-        this.experience=new ListeExperience();
-        this.langue=new ListeLangue();
+        this.experience = new ListeExperience();
+        this.langue = new ListeLangue();
     }
     public Resume(String nom,String prenom,String Adresse,ListeExperience experience,ListeLangue langue)
     {
