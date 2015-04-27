@@ -1,2 +1,0 @@
-# clientXml
-repository du client
